@@ -1,0 +1,46 @@
+html {
+  font-size: calc(8px + 2vmin);
+  font-family: sans-serif;
+  background: white;
+}
+
+body,
+body * {
+  display: block;
+  background: none;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body,
+noscript {
+  height: 100vh;
+  display: flex;
+}
+
+noscript {
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+button {
+  margin: auto;
+  padding: 2rem;
+  font-size: 8rem;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+h1 {
+  margin: auto;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
