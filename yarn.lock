@@ -633,9 +633,9 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-hyperapp@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-0.9.2.tgz#9392b07318baa188a97a723f674f4dea874b9c53"
+hyperapp@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-0.9.3.tgz#f2613c7ac0530c14323f2200e9e4be87ff38ffb1"
 
 ignore-by-default@^1.0.0:
   version "1.0.1"
