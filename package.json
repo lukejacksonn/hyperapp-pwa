@@ -22,11 +22,12 @@
     "http-server-spa": "^1.2.0",
     "ncp": "^2.0.0",
     "npm-watch": "^0.1.9",
-    "rollup": "^0.41.4",
+    "postcss-nested": "^2.0.2",
+    "rollup": "^0.43.0",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-scss": "^0.2.0",
-    "rollup-plugin-uglify": "^1.0.1"
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-postcss": "^0.5.3"
   },
   "dependencies": {
     "hyperapp": "^0.9.3"
