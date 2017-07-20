@@ -12,6 +12,7 @@
     "server": { "patterns": "package.json", "quiet": true }
   },
   "scripts": {
+    "install": "npm run build",
     "static": "ncp static dist",
     "bundle": "rollup -c -i src/index.js -o dist/index.js",
     "server": "http-server-spa dist",
