@@ -9,18 +9,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <script>(function(){
-      var redirect = sessionStorage.redirect
-      delete sessionStorage.redirect
-      if (redirect && redirect != location.href) history.replaceState(null, null, redirect)
-      if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js')
-    })()</script>
-    <script async src="/index.js"></script>
     <link rel="stylesheet" href="/index.css">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/icons/favicon.png">
   </head>
   <body></body>
+  <script src="/startup.js"></script>
+  <script src="/index.js"></script>
   <noscript>Enable JavaScript</noscript>
 </html>
