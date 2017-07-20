@@ -4,6 +4,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
     .then(cache => cache.addAll([
+      '/startup.js',
       '/index.js',
       '/index.css'
     ]))
