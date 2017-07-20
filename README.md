@@ -10,6 +10,8 @@ npm start       // Build and watch files for changes
 
 This will build the application and serve it on http://localhost:8080
 
+Example Deploy: https://hyperapp.deployable.site
+
 ## Features of this template
 
 - Very minimal config files, developer and client side dependencies
