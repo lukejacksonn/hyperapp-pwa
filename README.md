@@ -16,6 +16,7 @@ Example Deploy: https://hyperapp.deployable.site
 
 - Very minimal config files, developer and client side dependencies
 - Developer task that rebuilds app when source files change using [npm-watch](https://www.npmjs.com/package/npm-watch)
+- Reloads the browser when distributed files change using [livereload](https://www.npmjs.com/package/livereload)
 - Bundle scripts task supporting `ES6` and `JSX` transforms using [buble](https://www.npmjs.com/package/buble)
 - Preprocessing and concatenating stylesheets using using [rollup-plugin-scss](https://www.npmjs.com/package/rollup-plugin-scss)
 - Local static file server supporting HTML5 fallback using [http-server-spa](https://www.npmjs.com/package/http-server-spa)
