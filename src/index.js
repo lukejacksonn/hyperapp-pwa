@@ -1,5 +1,6 @@
 import { h, app, Router } from 'hyperapp'
 import './index.css'
+import './startup'
 
 app({
   state: {
