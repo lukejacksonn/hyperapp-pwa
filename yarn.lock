@@ -22,6 +22,10 @@ acorn@^3.0.4, acorn@^3.1.0, acorn@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
+acorn@^4.0.1:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
+
 ajv@^4.9.1:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
@@ -592,6 +596,16 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+hyperapp-hmr@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/hyperapp-hmr/-/hyperapp-hmr-0.1.0.tgz#b691c5dafd1684065c5fcdec911b2e981984cc1f"
+  dependencies:
+    hyperapp-persist "^1.1.0"
+
+hyperapp-persist@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/hyperapp-persist/-/hyperapp-persist-1.1.0.tgz#fc8d45b07007378ffd5a593320b20fe4d8041478"
+
 hyperapp@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-0.9.3.tgz#f2613c7ac0530c14323f2200e9e4be87ff38ffb1"
@@ -863,6 +877,12 @@ lowercase-keys@^1.0.0:
 magic-string@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.14.0.tgz#57224aef1701caeed273b17a39a956e72b172462"
+  dependencies:
+    vlq "^0.2.1"
+
+magic-string@^0.19.0:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.19.1.tgz#14d768013caf2ec8fdea16a49af82fc377e75201"
   dependencies:
     vlq "^0.2.1"
 
@@ -1256,7 +1276,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.6:
+resolve@^1.1.6, resolve@^1.1.7:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
   dependencies:
@@ -1280,6 +1300,16 @@ rollup-plugin-buble@^0.15.0:
   dependencies:
     buble "^0.15.0"
     rollup-pluginutils "^1.5.0"
+
+rollup-plugin-commonjs@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-commonjs/-/rollup-plugin-commonjs-8.0.2.tgz#98b1589bfe32a6c0f67790b60c0b499972afed89"
+  dependencies:
+    acorn "^4.0.1"
+    estree-walker "^0.3.0"
+    magic-string "^0.19.0"
+    resolve "^1.1.7"
+    rollup-pluginutils "^2.0.1"
 
 rollup-plugin-node-resolve@^2.0.0:
   version "2.1.1"
