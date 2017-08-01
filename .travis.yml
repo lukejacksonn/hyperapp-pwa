@@ -6,7 +6,7 @@ script: npm run build
 
 deploy:
   fqdn: hyperapp.deployable.site
-  local_dir: dist
+  local_dir: build
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN

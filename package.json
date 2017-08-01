@@ -5,7 +5,7 @@
   "author": "Luke Jackson (lukejacksonn@gmail.com)",
   "license": "MIT",
   "main": "src/index.js",
-  "output": "dist",
+  "output": "build",
   "watch": {
     "static": { "patterns": "static", "extensions": "*", "quiet": true },
     "bundle": { "patterns": "src", "extensions": "*", "quiet": true },
@@ -14,10 +14,10 @@
   },
   "scripts": {
     "install": "npm run build",
-    "static": "ncp static dist",
-    "bundle": "rollup -c -i src/index.js -o dist/index.js",
-    "server": "http-server-spa dist",
-    "reload": "livereload dist",
+    "static": "ncp static build",
+    "bundle": "rollup -c -i src/index.js -o build/index.js",
+    "server": "http-server-spa build",
+    "reload": "livereload build",
     "build": "npm run static && npm run bundle",
     "start": "npm-watch"
   },
