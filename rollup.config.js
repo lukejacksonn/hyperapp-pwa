@@ -9,7 +9,6 @@ export default {
   format: 'iife',
   plugins: [
     postcss({
-      sourceMap: 'inline',
       extract : true,
       plugins: [ nested() ],
     }),
