@@ -35,6 +35,7 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "hyperapp": "^0.9.3"
+    "@hyperapp/router": "^0.1.0",
+    "hyperapp": "^0.12.0"
   }
 }
