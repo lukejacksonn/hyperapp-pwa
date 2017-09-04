@@ -1,20 +1,32 @@
-import buble from "rollup-plugin-buble"
-import commonjs from "rollup-plugin-commonjs"
-import resolve from "rollup-plugin-node-resolve"
-import uglify from "rollup-plugin-uglify"
-import postcss from "rollup-plugin-postcss"
-import nested from "postcss-nested"
+import buble from 'rollup-plugin-buble'
+import commonjs from 'rollup-plugin-commonjs'
+import resolve from 'rollup-plugin-node-resolve'
+import uglify from 'rollup-plugin-uglify'
+import copy from 'rollup-plugin-copy'
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
+import postcss from 'rollup-plugin-postcss'
+import nested from 'postcss-nested'
+
+const prod = !process.env.ROLLUP_WATCH
+const dev = !!process.env.ROLLUP_WATCH
 
 export default {
+  entry: 'src/index.js',
+  dest: 'build/index.js',
   format: 'iife',
   plugins: [
-    postcss({
-      extract : true,
-      plugins: [ nested() ],
-    }),
-    commonjs(),
+    copy({ 'static': 'build' }),
+    postcss({ plugins: [nested()] }),
     resolve({ jsnext: true }),
-    buble({ jsx: "h" }),
-    uglify(),
+    commonjs(),
+    buble({ jsx: 'h' }),
+    prod && uglify(),
+    dev && livereload('build'),
+    dev && serve({
+      contentBase: ['build'],
+      historyApiFallback: true,
+      port: 8080,
+    })
   ]
 }
