@@ -1,8 +1,13 @@
 import { h, app } from 'hyperapp'
 import { Router } from '@hyperapp/router'
-
 import './index.css'
-import './startup'
+
+// Check for any github-pages 404 redirect
+history.replaceState(null, null, sessionStorage.redirect)
+delete sessionStorage.redirect
+// Register service worker if not on localhost
+const local = window.location.host.startsWith('localhost')
+if ('serviceWorker' in navigator && !local) navigator.serviceWorker.register('/sw.js')
 
 app({
   state: {
