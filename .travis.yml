@@ -5,8 +5,8 @@ node_js:
 script: npm run build
 
 deploy:
-  fqdn: hyperapp.deployable.site
-  local_dir: build
+  fqdn: hyperapp-pwa.deployable.site
+  local_dir: static
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN

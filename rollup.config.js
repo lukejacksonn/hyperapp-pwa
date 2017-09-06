@@ -2,7 +2,6 @@ import buble from 'rollup-plugin-buble'
 import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 import uglify from 'rollup-plugin-uglify'
-import copy from 'rollup-plugin-copy'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 import postcss from 'rollup-plugin-postcss'
@@ -13,18 +12,17 @@ const dev = !!process.env.ROLLUP_WATCH
 
 export default {
   entry: 'src/index.js',
-  dest: 'build/index.js',
+  dest: 'static/index.js',
   format: 'iife',
   plugins: [
-    copy({ 'static': 'build' }),
     postcss({ plugins: [nested()] }),
     resolve({ jsnext: true }),
     commonjs(),
     buble({ jsx: 'h' }),
     prod && uglify(),
-    dev && livereload('build'),
+    dev && livereload('static'),
     dev && serve({
-      contentBase: ['build'],
+      contentBase: ['static'],
       historyApiFallback: true,
       port: 8080,
     })
