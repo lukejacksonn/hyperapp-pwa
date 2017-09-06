@@ -1,8 +1,6 @@
-var CACHE_NAME = 'hyperapp-pwa';
-
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open('hyperapp-pwa')
     .then(cache => cache.addAll(['/index.js']))
   )
 })
