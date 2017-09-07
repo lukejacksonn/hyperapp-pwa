@@ -5,7 +5,6 @@ Once you have cloned or forked this project, use the following tasks from the pr
 
 ```
 npm install     // Install all dependencies
-npm build       // Build app for production environment
 npm start       // Serve app on localhost and watch source files
 ```
 
