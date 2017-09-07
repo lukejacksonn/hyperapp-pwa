@@ -11,9 +11,12 @@ const prod = !process.env.ROLLUP_WATCH
 const dev = !!process.env.ROLLUP_WATCH
 
 export default {
-  entry: 'src/index.js',
-  dest: 'static/index.js',
-  format: 'iife',
+  input: 'src/index.js',
+  output: {
+    file: 'static/index.js',
+    sourcemap: dev ? 'inline' : false,
+    format: 'iife',
+  },
   plugins: [
     postcss({ plugins: [nested()] }),
     resolve({ jsnext: true }),
