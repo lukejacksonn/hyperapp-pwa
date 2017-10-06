@@ -15,7 +15,7 @@ export default {
   output: {
     file: 'static/index.js',
     sourcemap: dev ? 'inline' : false,
-    format: 'iife',
+    format: 'iife'
   },
   plugins: [
     postcss({ plugins: [nested()] }),
@@ -24,10 +24,11 @@ export default {
     buble({ jsx: 'h' }),
     prod && uglify(),
     dev && livereload('static'),
-    dev && serve({
-      contentBase: ['static'],
-      historyApiFallback: true,
-      port: 8080,
-    })
+    dev &&
+      serve({
+        contentBase: ['static'],
+        historyApiFallback: true,
+        port: 8080
+      })
   ]
 }
