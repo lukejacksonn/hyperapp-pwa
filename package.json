@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@hyperapp/router": "^0.3.0",
-    "hyperapp": "^0.12.0"
+    "hyperapp": "^0.14.0"
   },
   "lint-staged": {
     "*.{js,css,html}": ["prettier --single-quote --no-semi --print-width 120 --write", "git add"]
