@@ -1,5 +1,5 @@
 import { h, app } from 'hyperapp'
-import { Router } from '@hyperapp/router'
+import { router } from '@hyperapp/router'
 import './index.css'
 
 // Check for any github-pages 404 redirect
@@ -13,14 +13,14 @@ if ('serviceWorker' in navigator && !local) navigator.serviceWorker.register('/s
 // Start the hyperapp
 app({
   state: {
-    count: 0,
+    count: 0
   },
   actions: {
-    add: s => ({ count: s.count + 1 }),
+    add: s => ({ count: s.count + 1 })
   },
   view: [
-    ['/', (s,a) => <button onclick={a.add}>{s.count}</button>],
-    ['*', (s,a) => <h1 onclick={e => a.router.go('/')}>Back to {location.hostname}</h1>],
+    ['/', (s, a) => <button onclick={a.add}>{s.count}</button>],
+    ['*', (s, a) => <h1 onclick={e => a.router.go('/')}>Back to {location.hostname}</h1>]
   ],
-  mixins: [Router],
+  mixins: [router()]
 })
