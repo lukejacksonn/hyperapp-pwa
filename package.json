@@ -18,7 +18,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-postcss": "^0.5.4",
     "rollup-plugin-serve": "^0.4.2",
-    "rollup-plugin-uglify": "^2.0.1"
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-load-plugins": "^0.3.0"
   },
   "dependencies": {
     "@hyperapp/router": "^0.1.0",
