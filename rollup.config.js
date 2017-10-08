@@ -1,5 +1,5 @@
 const $ = require('rollup-load-plugins')()
-import nested from 'postcss-nested'
+const nested = require('postcss-nested')
 
 const prod = !process.env.ROLLUP_WATCH
 const dev = !!process.env.ROLLUP_WATCH
