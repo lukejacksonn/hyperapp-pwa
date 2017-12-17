@@ -19,6 +19,15 @@ body,
 noscript {
   height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  display: flex;
+  > * + * {
+    margin-left: 0.38rem;
+  }
 }
 
 noscript {
@@ -29,18 +38,18 @@ noscript {
 }
 
 button {
-  margin: auto;
-  padding: 2rem;
-  font-size: 8rem;
+  padding: 0.62rem 1rem;
+  font-size: 0.62rem;
+  border: 1px solid #000;
   font-weight: bold;
   cursor: pointer;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 h1 {
   margin: auto;
-  font-size: 1rem;
+  font-size: 8rem;
   cursor: pointer;
-  text-decoration: underline;
+  text-align: center;
 }

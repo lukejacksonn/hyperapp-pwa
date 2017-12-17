@@ -1,26 +1,25 @@
-import { h, app } from 'hyperapp'
-import { Router } from '@hyperapp/router'
+import { app } from 'hyperapp'
+import { main, h1, div, button } from '@hyperapp/html'
 import './index.css'
 
-// Check for any github-pages 404 redirect
-history.replaceState(null, null, sessionStorage.redirect)
-delete sessionStorage.redirect
-
-// Register service worker if not on localhost
-const local = window.location.host.startsWith('localhost')
-if ('serviceWorker' in navigator && !local) navigator.serviceWorker.register('/sw.js')
-
-// Start the hyperapp
-app({
+const model = {
   state: {
     count: 0,
   },
   actions: {
-    add: s => ({ count: s.count + 1 }),
+    reset: () => ({ count: 0 }),
+    sum: data => ({ count }) => ({ count: count + data }),
   },
-  view: [
-    ['/', (s,a) => <button onclick={a.add}>{s.count}</button>],
-    ['*', (s,a) => <h1 onclick={e => a.router.go('/')}>Back to {location.hostname}</h1>],
-  ],
-  mixins: [Router],
-})
+}
+
+const view = ({ state, actions }) =>
+  main([
+    h1(state.count),
+    div([
+      button({ onclick: e => actions.sum(-1) }, 'Sub'),
+      button({ onclick: e => actions.reset() }, 'Reset'),
+      button({ onclick: e => actions.sum(1) }, 'Add'),
+    ]),
+  ])
+
+app(model, view, document.body)

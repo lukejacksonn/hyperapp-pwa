@@ -16,6 +16,13 @@ export default {
     file: 'static/index.js',
     sourcemap: dev ? 'inline' : false,
     format: 'iife',
+    intro:
+      !dev &&
+      `
+      history.replaceState(null, null, sessionStorage.redirect)
+      delete sessionStorage.redirect
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js')
+    `,
   },
   plugins: [
     postcss({ plugins: [nested()] }),
@@ -24,10 +31,11 @@ export default {
     buble({ jsx: 'h' }),
     prod && uglify(),
     dev && livereload('static'),
-    dev && serve({
-      contentBase: ['static'],
-      historyApiFallback: true,
-      port: 8080,
-    })
-  ]
+    dev &&
+      serve({
+        contentBase: ['static'],
+        historyApiFallback: true,
+        port: 8080,
+      }),
+  ],
 }
