@@ -2,17 +2,16 @@ import { app } from 'hyperapp'
 import { main, h1, div, button } from '@hyperapp/html'
 import './index.css'
 
-const model = {
-  state: {
-    count: 0,
-  },
-  actions: {
-    reset: () => ({ count: 0 }),
-    sum: data => ({ count }) => ({ count: count + data }),
-  },
+const state = {
+  count: 0,
 }
 
-const view = ({ state, actions }) =>
+const actions = {
+  reset: () => ({ count: 0 }),
+  sum: data => ({ count }) => ({ count: count + data }),
+}
+
+const view = (state, actions) =>
   main([
     h1(state.count),
     div([
@@ -22,4 +21,4 @@ const view = ({ state, actions }) =>
     ]),
   ])
 
-app(model, view, document.body)
+app(state, actions, view, document.body)
