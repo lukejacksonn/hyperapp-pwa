@@ -27,8 +27,9 @@ export default {
   plugins: [
     postcss({ plugins: [nested()] }),
     resolve({ jsnext: true }),
-    commonjs(),
     buble({ jsx: 'h' }),
+    commonjs(),
+    buble(),
     prod && uglify(),
     dev && livereload('static'),
     dev &&
