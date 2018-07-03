@@ -1,5 +1,4 @@
-import { app } from 'hyperapp'
-import { main, h1, div, button } from '@hyperapp/html'
+import { app, h } from 'hyperapp'
 import './index.css'
 
 const state = {
@@ -11,14 +10,15 @@ const actions = {
   sum: data => ({ count }) => ({ count: count + data }),
 }
 
-const view = (state, actions) =>
-  main([
-    h1(state.count),
-    div([
-      button({ onclick: e => actions.sum(-1) }, 'Sub'),
-      button({ onclick: e => actions.reset() }, 'Reset'),
-      button({ onclick: e => actions.sum(1) }, 'Add'),
-    ]),
-  ])
+const view = (state, actions) => (
+  <main>
+    <h1>{state.count}</h1>
+    <div>
+      <button onclick={e => actions.sum(-1)}>Sub</button>
+      <button onclick={e => actions.reset()}>Reset</button>
+      <button onclick={e => actions.sum(-1)}>Add</button>
+    </div>
+  </main>
+)
 
 app(state, actions, view, document.body)
