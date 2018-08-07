@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>sessionStorage.redirect = location.href</script>
+    <meta http-equiv="refresh" content="0;URL='/'"></meta>
+  </head>
+  <body>
+    <!--
+    This file will be returned by github-pages servers when the user visits
+    => https://your.deployable.site/any-path-that-is-not-a-file
+    It will save the location href to sessionStorage and redirect to
+    => https://your.deployable.site/
+    Your app should check for a redirect on load and replace the history state
+    => history.replaceState(null, null, sessionStorage.redirect)
+    => delete sessionStorage.redirect
+    404.html pages are only valid when > 512 bytes
+    -->
+  </body>
+</html>

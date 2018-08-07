@@ -1,0 +1,26 @@
+{
+  "short_name": "hyperapp-pwa",
+  "name": "Hyperapp progressive web app template",
+  "description": "A minimalist progressive web app compliant template for hyperapp projects",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "white",
+  "background_color": "white",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "en",
+  "icons": [{
+    "src": "/icons/apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  },{
+    "src": "/icons/android-chrome-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },{
+    "src": "/icons/android-chrome-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
