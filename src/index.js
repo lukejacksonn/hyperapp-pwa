@@ -16,7 +16,7 @@ const view = (state, actions) => (
     <div>
       <button onclick={e => actions.sum(-1)}>Sub</button>
       <button onclick={e => actions.reset()}>Reset</button>
-      <button onclick={e => actions.sum(-1)}>Add</button>
+      <button onclick={e => actions.sum(1)}>Add</button>
     </div>
   </main>
 )
